@@ -1,0 +1,1182 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Deixa a rolagem da página suave */
+html {
+    scroll-behavior: smooth;
+}
+/* Configurações principais da página */
+body {
+    background-color: #02020b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.home {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    min-height: 700px;
+
+    overflow: hidden;
+}
+
+/* =========================
+   IMAGEM DE FUNDO
+========================= */
+
+.background-image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+/* Ela faz a imagem preencher todo o espaço, mesmo que seja necessário cortar um pouco das bordas*/
+    object-fit: cover;
+/* define a camada da imagem */
+    z-index: 0;
+}
+
+/* =========================
+   CONTEÚDO DA HOME
+========================= */
+
+.home-content {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 125px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 9%;
+    padding-right: 9%;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    display: block;
+    margin-left: -150px;
+     margin-top: 15px;
+    width: 450px;
+/* Não diminua a logo se faltar espaço no menu*/
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================
+   MENU DE NAVEGAÇÃO
+========================= */
+
+.menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 48px;
+
+    margin-left: auto;
+}
+
+.menu a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #c415fb;
+}
+
+
+/* INÍCIO */
+
+.menu a:first-child {
+    color: #c415fb;
+}
+
+
+/* =========================
+   TEXTOS
+========================= */
+
+.home-text {
+    position: absolute;
+
+    top: 185px;
+    left: 9%;
+}
+
+
+/* texto pequeno */
+
+.home-subtitle {
+    color: #c415fb;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    line-height: 1.25;
+
+    margin-bottom: 14px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.home-text h1 {
+    color: white;
+
+    font-size: clamp(55px, 6vw, 82px);
+
+    font-weight: 900;
+
+    line-height: 0.93;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 60px;
+}
+
+
+/* palavras roxas */
+
+.home-text h1 span {
+    color: #c415fb;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.home-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 210px;
+
+    height: 40px;
+
+    padding: 0 28px;
+
+    background: linear-gradient(
+        90deg,
+        #c415fb,
+        #6603be
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    border-radius: 7px;
+
+    transition: 0.3s;
+}
+
+
+/* efeito quando passa o mouse */
+
+.home-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(196, 21, 251, 0.6);
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .logo {
+        width: 190px;
+    }
+
+    .menu {
+        gap: 25px;
+    }
+
+    .home-text {
+        left: 5%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .menu {
+        display: none;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    .home-text {
+        left: 7%;
+        top: 180px;
+    }
+
+    .home-text h1 {
+        font-size: 50px;
+    }
+
+}
+
+/* =========================
+   SEGUNDA PÁGINA - SOBRE NÓS
+========================= */
+
+.sobre {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   IMAGEM DE FUNDO
+========================= */
+
+.background-sobre {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.sobre-content {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    z-index: 1;
+
+    padding: 40px 8% 60px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.sobre-titulo {
+    position: relative;
+
+    margin-top: 0;
+
+    width: 500px;
+}
+
+
+/* linha antes de "NOSSA EQUIPE" */
+
+.sobre-titulo::before {
+    content: "";
+
+    position: absolute;
+
+    left: -20px;
+    top: 14px;
+
+    width: 110px;
+    height: 1px;
+
+    background-color: white;
+}
+
+
+/* subtítulo */
+
+.sobre-subtitulo {
+    margin-left: 105px;
+
+    margin-bottom: 20px;
+
+    color: #c415fb;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    font-weight: 400;
+}
+
+
+/* título principal */
+
+.sobre-titulo h2 {
+    color: white;
+
+    font-size: 34px;
+
+    line-height: 1.25;
+
+    font-weight: 900;
+
+    margin-bottom: 12px;
+}
+
+
+/* Lumia roxo */
+
+.sobre-titulo h2 span {
+    color: #c415fb;
+}
+
+
+/* descrição */
+
+.sobre-descricao {
+    color: #d5d5d5;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   FRASE DO LADO DIREITO
+========================= */
+
+.sobre-frase {
+    position: absolute;
+
+    top: 120px;
+    right: 9%;
+
+    width: 190px;
+
+    text-align: center;
+}
+
+
+.sobre-frase p {
+    color: #d0d0d0;
+
+    font-size: 16px;
+
+    font-style: italic;
+
+    line-height: 1.35;
+}
+
+
+.sobre-frase strong {
+    color: #d9a9e8;
+
+    font-weight: 800;
+
+    font-style: normal;
+}
+
+
+/* =========================
+   EQUIPE
+========================= */
+
+.equipe {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 46px 20px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card-integrante {
+    position: relative;
+
+    height: 122px;
+
+    border: 2px solid #c415fb;
+
+    border-radius: 7px;
+
+    background: rgba(5, 2, 15, 0.45);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 8px;
+
+    overflow: visible;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.foto-integrante {
+    width: 105px;
+    height: 105px;
+
+    flex-shrink: 0;
+
+    border: 3px solid #c415fb;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    margin-left: -2px;
+}
+
+
+.foto-integrante img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.info-integrante {
+    margin-left: 12px;
+
+    padding-right: 5px;
+}
+
+
+.info-integrante h3 {
+    color: white;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    text-align: center;
+
+    margin-bottom: 4px;
+
+    font-weight: 800;
+}
+
+
+.info-integrante h4 {
+    color: #c415fb;
+
+    font-size: 12px;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+
+    font-weight: 500;
+}
+
+
+.info-integrante p {
+    color: white;
+
+    font-size: 13px;
+
+    line-height: 1.25;
+
+    text-align: left;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .sobre-content {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .sobre-titulo {
+        width: 450px;
+    }
+
+    .equipe {
+        max-width: 650px;
+    }
+
+    .sobre-frase {
+        right: 5%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sobre {
+        min-height: auto;
+    }
+
+    .sobre-content {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .sobre-titulo {
+        width: 100%;
+    }
+
+    .sobre-subtitulo {
+        margin-left: 0;
+    }
+
+    .sobre-titulo::before {
+        display: none;
+    }
+
+    .sobre-frase {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        margin: 30px auto;
+
+        width: 200px;
+    }
+
+    .equipe {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+        margin: auto;
+
+        margin-top: 70px;
+    }
+
+}
+.card-integrante:nth-child(2),
+.card-integrante:nth-child(4) {
+    transform: translateX(300px);
+}
+
+/* MOVER BIA E GABRIEL */
+.card-integrante:nth-child(1),
+.card-integrante:nth-child(3) {
+    transform: translateX(200px);
+}
+
+/* =========================
+   BANNER DO PRODUTO
+========================= */
+
+.produto {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+.produto-background {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+/* Posiciona o bloco que contém MOTOR e WEG */
+.produto-texto {
+    /* Permite escolher exatamente onde o texto ficará */
+    position: absolute;
+
+    /* Distância do topo do banner */
+    top: 25%;
+
+    /* Distância da esquerda do banner */
+    left: 10%;
+
+    /* Coloca o texto acima da imagem */
+    z-index: 1;
+}
+/* TÍTULO "MOTOR" */
+
+.produto-texto h2 {
+    /* Cor branca do texto */
+    color: white;
+
+    /* Tamanho da palavra MOTOR */
+    font-size: 130px;
+
+    /* Deixa o texto mais grosso */
+    font-weight: 900;
+
+    /* Altura entre as linhas */
+    line-height: 1;
+
+    /* Espaço abaixo de MOTOR */
+    margin-bottom: 5px;
+}
+
+/* NOME "WEG" */
+
+.produto-texto h3 {
+    /* Cor roxa da identidade da Lumia */
+    color: #c415fb;
+
+    /* Tamanho do WEG */
+    font-size: 130px;
+
+    /* Deixa o texto mais grosso */
+    font-weight: 700;
+
+    /* Altura da linha */
+    line-height: 1;
+}
+
+/* =========================
+   BOTÃO DO PRODUTO
+========================= */
+
+/* Configura o botão */
+.produto-button {
+    /* Permite controlar largura, altura e posicionamento */
+    display: inline-flex;
+
+    /* Centraliza o texto verticalmente */
+    align-items: center;
+
+    /* Centraliza o texto horizontalmente */
+    justify-content: center;
+
+    /* Tamanho do botão */
+    min-width: 250px;
+    height: 70px;
+
+    /* Espaçamento interno do botão */
+    padding: 0 25px;
+
+    /* Gradiente roxo da Lumia */
+    background: linear-gradient(
+        90deg,
+        #c415fb,
+        #6603be
+    );
+
+    /* Cor do texto */
+    color: white;
+
+    /* Tira o sublinhado do link */
+    text-decoration: none;
+
+    /* Tamanho do texto */
+    font-size: 25px;
+
+    /* Deixa o texto mais forte */
+    font-weight: 600;
+
+    /* Arredonda os cantos */
+    border-radius: 7px;
+
+    /* Animação quando passar o mouse */
+    transition: 0.3s;
+}
+
+/* Posiciona o botão dentro do banner */
+.produto-button {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    z-index: 999;
+    display: inline-flex;
+}
+/* =========================
+   PÁGINA DE VÍDEOS
+========================= */
+
+/* Área principal da página */
+.videos {
+    position: relative;
+
+    /* Ocupa toda a largura */
+    width: 100%;
+
+    /* Uma tela inteira de altura */
+    min-height: 100vh;
+
+    /* Esconde qualquer parte da imagem que ultrapasse a página */
+    overflow: hidden;
+}
+
+
+/* Papel de parede */
+
+.background-videos {
+    position: absolute;
+
+    /* Começa no canto superior esquerdo */
+    top: 0;
+    left: 0;
+
+    /* Ocupa toda a página */
+    width: 100%;
+    height: 100%;
+
+    /* Faz a imagem preencher o espaço */
+    object-fit: cover;
+
+    /* Fica atrás dos outros elementos */
+    z-index: 0;
+}
+
+/* =========================
+   TÍTULO DA PÁGINA DE VÍDEOS
+========================= */
+
+.videos-titulo {
+    position: relative;
+
+    /* Faz o texto ficar na frente do papel de parede */
+    z-index: 1;
+
+    /* Posicionamento */
+    padding-top: 80px;
+    margin-left: 9%;
+}
+
+
+/* Texto pequeno "CONHEÇA A LUMIA" */
+
+.videos-titulo p {
+    color: #c415fb;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Título VÍDEOS */
+
+.videos-titulo h2 {
+    color: white;
+
+    font-size: 80px;
+
+    font-weight: 900;
+
+    line-height: 0.9;
+
+    margin: 0;
+}
+
+
+/* =========================
+   TÍTULO VÍDEOS
+========================= */
+
+/* Configura o título inteiro */
+.videos-titulo h2 {
+    color: white;
+
+    font-size: 80px;
+
+    font-weight: 900;
+
+    line-height: 0.9;
+
+    margin: 0;
+}
+
+
+/* Deixa somente "EO" roxo */
+.videos-titulo h2 span {
+    color: #c415fb;
+}
+
+
+/* Descrição */
+
+.videos-titulo > span {
+    display: block;
+
+    margin-top: 25px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    line-height: 1.7;
+
+    border-top: 2px solid #c415fb;
+
+    padding-top: 12px;
+
+    width: 650px;
+}
+
+/* =========================
+   ÁREA DO VÍDEO
+========================= */
+
+.video-area {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.video-caixa video {
+    width: 780px;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.video-caixa p {
+    color: white;
+    font-size: 20px;
+}
+
+.video-descricao {
+    width: 350px;
+    color: white;
+}
+
+.video-descricao h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.video-descricao p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+
+
+/* =========================
+   PAPEL DE PAREDE
+========================= */
+
+/* Configura a imagem de fundo */
+.background-contatos {
+    /* Coloca a imagem no fundo */
+    position: absolute;
+
+    /* Começa no canto superior esquerdo */
+    top: 0;
+    left: 0;
+
+    /* Ocupa toda a largura */
+    width: 100%;
+
+    /* Ocupa toda a altura */
+    height: 100%;
+
+    /* Faz a imagem preencher a página */
+    object-fit: cover;
+
+    /* Mantém a imagem atrás dos outros elementos */
+    z-index: 0;
+}
+
+/* =========================
+   CONTATOS
+========================= */
+
+.contato {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url("../IMG/papel\ de\ parede.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.contato-conteudo {
+    position: relative;
+    z-index: 1;
+
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+.contato-subtitulo {
+    color: white;
+    font-size: 14px;
+}
+
+.contato-conteudo h2 {
+    color: white;
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 25px;
+}
+
+.contato-conteudo h2 span {
+    color: #c415fb;
+}
+
+.contato-descricao {
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-top: 25px;
+}
+
+.contato-descricao span {
+    color: #c415fb;
+}
+
+.logo-contato {
+    width: 400px;
+    height: 280px;
+    margin-top: 30px;
+    display: block;
+    margin-left: 80px;
+     opacity: 0.5;
+}
+
+/* =========================
+   FORMULÁRIO DE CONTATO
+========================= */
+
+.formulario-contato {
+    position: absolute;
+
+    top: 160px;
+    right: 10%;
+
+    width: 420px;
+    padding: 30px;
+
+    border: 6px solid #6603be;
+    border-radius: 6px;
+
+    background-color: rgba(25, 0, 45, 0.75);
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Textos NOME, EMAIL e MENSAGEM */
+
+.formulario-contato label {
+    color: white;
+
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+/* Campos */
+
+.formulario-contato input,
+.formulario-contato textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background-color: #ddd;
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    font-size: 16px;
+}
+
+/* Campo de mensagem */
+
+.formulario-contato textarea {
+    height: 70px;
+    resize: none;
+}
+
+/* Botão */
+
+.formulario-contato button {
+    margin-top: 20px;
+
+    width: 100%;
+    height: 65px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: linear-gradient(
+        90deg,
+        #c415fb,
+        #6603be
+    );
+
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+
+    cursor: pointer;
+}
+
+
+
+
+/* =========================
+   BOTÃO VOLTAR
+========================= */
+
+.botao-voltar {
+    position: fixed;
+
+    left: 30px;
+    bottom: 30px;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        90deg,
+        #c415fb,
+        #6603be
+    );
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 28px;
+
+    border-radius: 50%;
+
+    z-index: 999;
+
+    transition: 0.3s;
+}
+
+.botao-voltar:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 0 20px rgba(196, 21, 251, 0.7);
+}
